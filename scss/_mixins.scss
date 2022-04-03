@@ -1,0 +1,23 @@
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@mixin breakpoint-down ($screen-width) {
+  @media only screen and (max-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up ($screen-width) {
+  @media only screen and (min-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between ($min-screen, $max-screen) {
+  @media only screen and (min-width: $min-screen) and (max-width: $max-screen) {
+    @content;
+  }
+}
